@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sevgi Ölçüm Testi</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 20px;
+    transition: background 2s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 6px 0 12px 0;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+}
+
+#sonuc {
+    margin-top: 25px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#final {
+    margin-top: 20px;
+    font-size: 22px;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Yasin’in sevgisini ölçmek için matematik testi 😄</h2>
+
+    <p>1) 50 + 50 = ?</p>
+    <input type="text">
+
+    <p>2) 12 × 3 = ?</p>
+    <input type="text">
+
+    <p>3) 1000 + 1000 = ?</p>
+    <input type="text">
+
+    <button onclick="hesapla()">Sevgi Seviyesini Hesapla</button>
+
+    <div id="sonuc"></div>
+    <div id="final"></div>
+</div>
+
+<script>
+
+function hesapla(){
+
+    const sonuc = document.getElementById("sonuc");
+    const final = document.getElementById("final");
+
+    sonuc.style.opacity = 1;
+    sonuc.innerHTML = "Veriler analiz ediliyor...";
+
+    setTimeout(() => {
+        sonuc.innerHTML = "Yaramazlık katsayısı hesaplanıyor...";
+    }, 1200);
+
+    setTimeout(() => {
+        sonuc.innerHTML = "Sabır seviyesi ölçülüyor...";
+    }, 2400);
+
+    setTimeout(() => {
+        sonuc.innerHTML = "Matematik sistemi hesaplamaya çalışıyor...";
+    }, 3600);
+
+    setTimeout(() => {
+
+        document.body.style.background =
+        "radial-gradient(circle, #ff4b7d, #111)";
+
+        sonuc.innerHTML = "⚠ HATA";
+        final.style.opacity = 1;
+        final.innerHTML =
+        "Yasin’in sevgisine matematik sistemleri yetersiz kaldı. ♾️";
+
+    }, 5000);
+}
+
+</script>
+
+</body>
+</html>
